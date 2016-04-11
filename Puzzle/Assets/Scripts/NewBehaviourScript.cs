@@ -48,7 +48,7 @@ public class NewBehaviourScript : MonoBehaviour {
             }
             else
             {
-                if(count == 50)
+                if(count == 70)
                 {
 
                 

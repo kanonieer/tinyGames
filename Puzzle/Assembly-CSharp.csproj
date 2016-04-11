@@ -47,6 +47,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
      <Compile Include="Assets\Scripts\OnMouseClick.cs" />
+     <Compile Include="Assets\Scripts\menuScript.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>S:/UNITY/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
