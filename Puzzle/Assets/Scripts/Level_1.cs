@@ -10,6 +10,10 @@ public class Level_1 : MonoBehaviour {
     public Canvas MenuLose;
     public Canvas menuBox;
     public Button MENU;
+    public GameObject karta1;
+    public GameObject karta2;
+    public GameObject karta3;
+    public GameObject karta4;
 
     int count;
 
@@ -20,7 +24,9 @@ public class Level_1 : MonoBehaviour {
     GameObject[] licz;
     GameObject[] licz2;
     GameObject[] allObjects;
-
+    GameObject[] blueObjects;
+    GameObject[] greenObjects;
+    GameObject[] Karty;
 
     void Start()
     {
@@ -29,12 +35,35 @@ public class Level_1 : MonoBehaviour {
         menuBox.enabled = false;
         MenuLose.enabled = false;
         Plansza.enabled = false;
+        Karty = new GameObject[4];
+        Karty[0] = karta1;
+        Karty[1] = karta2;
+        Karty[2] = karta3;
+        Karty[3] = karta4;
+        karta1.transform.FindChild("kolor").GetComponent<Renderer>().material.color = numerOfColor();
+        karta2.transform.FindChild("kolor").GetComponent<Renderer>().material.color = numerOfColor();
+        karta3.transform.FindChild("kolor").GetComponent<Renderer>().material.color = numerOfColor();
+        karta4.transform.FindChild("kolor").GetComponent<Renderer>().material.color = numerOfColor();
         count = 0;
         wynik = 0;
         licznik = 3;
         tekstWynik.text = "Wynik: " + wynik.ToString();
         LicznikProb.text= "Pozostało prób: " + licznik.ToString();
 
+    }
+    public Color numerOfColor()
+    {
+        Color blue = new Color(0, 0, 1, 1);
+        Color green = new Color(0, 1, 0, 1);
+        int licznik = Random.Range(0, 2);
+        if (licznik == 1)
+        {
+            return blue;
+        }
+        else
+        {
+            return green;
+        }
     }
     public void loadMenu()
     {
