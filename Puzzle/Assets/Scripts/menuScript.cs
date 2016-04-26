@@ -3,7 +3,8 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
 
-public class menuScript : MonoBehaviour {
+public class menuScript : MonoBehaviour
+{
 
     public Button startText;
     public Button exitText;
